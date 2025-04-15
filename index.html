@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pages of Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">My Diary</div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#profile-section" class="nav-link active">Profile</a></li>
+                <li><a href="#journal-section" class="nav-link">Journal</a></li>
+                <li><a href="#dreams-goals-section" class="nav-link">Dreams</a></li>
+                <li><a href="#mood-section" class="nav-link">Mood</a></li>
+                <li><a href="#destinations-section" class="nav-link">Travel</a></li>
+                <li><a href="#food-section" class="nav-link">Food</a></li>
+                <li><a href="#interests-section" class="nav-link">Interests</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Pages of Me</h1>
+            <div class="header-actions">
+                <button id="share-btn" class="btn">Share Diary</button>
+            </div>
+        </header>
+
+        
+        <main>
+            <section class="profile-section" id="profile-section">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-img-container">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Profile Photo" class="profile-img">
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="user-name">Sophie Anderson</h2>
+                            <p id="user-age">25 years old</p>
+                            <p id="user-gender">Female</p>
+                            <div class="personal-details">
+                                <p><span class="detail-label">Height:</span> <span id="user-height">5'6"</span></p>
+                                <p><span class="detail-label">Occupation:</span> <span id="user-occupation">Marketing Specialist</span></p>
+                                <p><span class="detail-label">Location:</span> <span id="user-location">San Francisco, CA</span></p>
+                            </div>
+                            <div class="relationship-status">
+                                <label for="status">Relationship Status:</label>
+                                <select id="status" name="status">
+                                    <option value="single">Single</option>
+                                    <option value="relationship" selected>In a relationship</option>
+                                    <option value="complicated">It's complicated</option>
+                                    <option value="married">Married</option>
+                                </select>
+                                <span id="current-status">In a relationship</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="journal-section" id="journal-section">
+                <h2>Daily Journal</h2>
+                <div class="journal-form">
+                    <textarea id="journal-entry" placeholder="How was your day today?"></textarea>
+                    <button id="save-journal" class="btn btn-primary">Save Entry</button>
+                </div>
+                <div class="recent-entries">
+                    <h3>Recent Entries</h3>
+                    <div class="entries-container" id="entries-container">
+                        <!-- Entries will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="dreams-goals-section" id="dreams-goals-section">
+                <h2>Dreams & Goals</h2>
+                <div class="dreams-goals-container">
+                    <div class="dreams-column">
+                        <h3>Dreams</h3>
+                        <div class="dream-list" id="dream-list">
+                            <!-- Dreams will be populated by JavaScript -->
+                        </div>
+                        <div class="add-dream-form">
+                            <input type="text" id="new-dream" placeholder="Add a new dream...">
+                            <button id="add-dream-btn" class="btn btn-small">Add</button>
+                        </div>
+                    </div>
+                    <div class="goals-column">
+                        <h3>Goals</h3>
+                        <div class="goals-list" id="goals-list">
+                            <!-- Goals will be populated by JavaScript -->
+                        </div>
+                        <div class="add-goal-form">
+                            <input type="text" id="new-goal" placeholder="Add a new goal...">
+                            <button id="add-goal-btn" class="btn btn-small">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="career-section" id="career-section">
+                <h2>Career Aspirations</h2>
+                <div class="career-expectations">
+                    <h3>Work Expectations</h3>
+                    <div id="work-expectations">
+                        <!-- Work expectations will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="mood-section" id="mood-section">
+                <h2>Mood Tracker</h2>
+                <div class="mood-tracker">
+                    <h3>How are you feeling today?</h3>
+                    <div class="mood-buttons">
+                        <button class="mood-btn" data-mood="happy">😊</button>
+                        <button class="mood-btn" data-mood="sad">😢</button>
+                        <button class="mood-btn" data-mood="angry">😠</button>
+                        <button class="mood-btn" data-mood="excited">🤩</button>
+                        <button class="mood-btn" data-mood="tired">😴</button>
+                    </div>
+                </div>
+                <div class="mood-history">
+                    <h3>Your Mood History</h3>
+                    <div class="mood-graph" id="mood-graph">
+                        <!-- Mood graph will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="day-section" id="day-section">
+                <h2>How was your day?</h2>
+                <div class="day-events" id="day-events">
+                    <!-- Day events will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <section class="destinations-section" id="destinations-section">
+                <h2>Travel Bucket List</h2>
+                <div class="destinations-container" id="destinations-container">
+                    <!-- Destinations will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <section class="food-section" id="food-section">
+                <h2>Food Favorites</h2>
+                <div class="food-columns">
+                    <div class="food-column">
+                        <h3>Favorite Dishes</h3>
+                        <ul id="favorite-dishes">
+                            <!-- Favorite dishes will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="food-column">
+                        <h3>Restaurants to Try</h3>
+                        <ul id="restaurants-list">
+                            <!-- Restaurants will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="food-column">
+                        <h3>Recipes to Try</h3>
+                        <ul id="recipes-list">
+                            <!-- Recipes will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interests-section" id="interests-section">
+                <h2>My Interests</h2>
+                <div class="interests-container">
+                    <div class="interest-card">
+                        <h3>Favorite Movies</h3>
+                        <div id="movies-list" class="movies-container">
+                            <!-- Movies will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Music Playlists</h3>
+                        <ul id="playlists-list">
+                            <!-- Playlists will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Happy Moments</h3>
+                        <div class="gallery" id="happy-gallery">
+                            <!-- Images will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="interest-card">
+                        <h3>My Photos</h3>
+                        <div class="gallery" id="girl-gallery">
+                            <!-- Girl images will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal" id="share-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p>Shared with 3 people!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
